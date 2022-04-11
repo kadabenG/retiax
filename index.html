@@ -29,6 +29,13 @@
         }
     </script>
 
+    <script>
+        var host = "retiax.be";
+        if (window.location.host == host && window.location.protocol != "https:") {
+            window.location.protocol = "https:"
+        }
+        </script>
+
     <!--- CSS --->
     <link rel="stylesheet" href="css/style.css">
     <!-- Bootstrap CSS -->
