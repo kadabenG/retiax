@@ -1,0 +1,921 @@
+* {
+ box-sizing: border-box;
+}
+*:before,
+*:after {
+ box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 1.1rem;  
+  font-family: metropolis !important;
+  font-weight: 100;
+  position: relative;
+  height: 100%;
+}
+
+
+h1{
+    margin-top: 3    5px !important;
+    font-family: metropolisBold !important;
+    font-weight: 100;
+    color: #114084;
+}
+
+
+/* since the navbar is fixed we need to add some space to the body */
+
+.text-small {
+    font-size: 1rem;
+}
+.navbar-collapse {
+ flex-grow: 0 !important;   
+}
+
+.w-60 {
+  max-width: 60% !important;
+}
+
+.w-80 {
+    max-width: 80% !important;
+}
+
+.w-85 {
+    max-width: 85% !important;
+}
+
+.w-90 {
+    max-width: 90% !important;
+}
+
+.navbar-index{
+    color: #3466AA;
+    background-color: #F1F1F1;
+}
+
+.navbar-text {
+    color: #3466AA !important;
+    font-size: 1.2rem !important; 
+    font-family: metropolis;
+}
+
+.navbar-text:hover {
+    border-bottom: #114084 1px solid;
+    opacity: 0.70; 
+}
+
+.active {
+    color: #114084 !important;
+    border-bottom: #114084 1px solid;
+}
+
+.navdropdown-text {
+    color: #3466AA !important;
+    font-size: 0.9rem !important; 
+    font-family: metropolisLight;
+}
+
+.navdropdown-text:hover {
+    opacity: 0.70; 
+}
+
+.navdropdown-text:focus {
+    background-color: #f1f1f1 !important; 
+    color: #114084 !important;
+}
+
+.werkenBtn {
+    display: inline-block !important;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    /* padding: .375rem .75rem; */
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+
+.darkblue {
+    color: #114084;
+}
+
+.lightblue {
+    color: #3466AA;
+}
+
+.bodylink:hover {
+    border-bottom: #114084 1px solid;
+    opacity: 0.70; 
+}
+
+
+p {
+    font-family: metropolisLight;
+    display:inline-block;
+}
+
+.img-grid {
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(400px,450px));
+    column-gap: 6px;
+    row-gap: 6px;
+}
+
+
+.grid-img {
+    width: 450px;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.img-container:hover {
+    opacity: 1;
+    transform: scale(1.02);
+}
+
+.dissappear {
+     transition: .4s ease;
+}
+
+.img-text{
+    position: absolute;
+    top: 115px;
+    left: 245px;
+    font-size: 2rem;
+    color: #f4f4f4;
+}
+
+.img-text2{
+    position: absolute;
+    top: 100px;
+    left: 90px;
+    font-size: 2rem;
+    color: #f4f4f4;
+}
+
+.img-text3{
+    position: absolute;
+    bottom: 275px;
+    left: 80px;
+    font-size: 2rem;
+    color: #f4f4f4;
+}
+
+.img-text4{
+    position: absolute;
+    top: 75px;
+    left: 35px;
+    font-size: 2rem;
+    color: #f4f4f4;
+}
+
+.img-text5{
+    position: absolute;
+    bottom: 45px;
+    right: 50px;
+    font-size: 2rem;
+    color: #f4f4f4;
+}
+
+.img-text6{
+    position: absolute;
+    bottom: 130px;
+    left: 15px;
+    font-size: 2rem;
+    color: #f4f4f4;
+}
+
+.img-text7{
+    position: absolute;
+    bottom: 165px;
+    left: 195px;
+    font-size: 2rem;
+    color: #f4f4f4;
+}
+
+.img-text8{
+    position: absolute;
+    top: 90px;
+    left: 275px;
+    font-size: 2rem;
+    color: #f4f4f4;
+}
+
+.img-container {
+    position: relative;
+    background-color: #F1F1F1;
+    opacity: .6;
+}
+
+.img-container:hover .dissappear {
+    opacity: 0;
+}
+
+/* Ripple effect */
+.ripple {
+  background-position: center;
+  transition: background 0.8s;
+}
+.ripple:hover {
+  background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+}
+.ripple:active {
+  background-color: #6eb9f7;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .4s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+.img-container:hover .overlay {
+  opacity: 1;
+}
+
+.gray {
+    background-color: #F1F1F1;
+}
+
+.email-link {
+    opacity: 1;
+    text-decoration-line: none; 
+}
+
+.email-link:hover {
+    opacity: .6;
+}
+
+
+
+#banner {
+    min-height: 600px;
+    background:url('../imgs/pexels-anamul-rezwan-1216544.jpg') no-repeat 0 -250px;
+    background-size: cover;
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+    justify-content: center;
+}
+
+.circle {
+  height: 400px;
+  width: 400px;
+  border-radius: 125px 125px 125px 125px;
+  display: inline-block;
+  background: rgba(	17, 64, 132,.90);             
+   top: 50%;                         
+   transform: translate(0, 25%);
+    padding-top: 1rem !important;
+}
+
+.circle2 {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  display: inline-block;
+  background: rgba(169,169,169,.8);             
+   top: 50%;                         
+   transform: translate(0, 25%);
+    
+}
+
+.banner-header {
+  color: #F1F1F1;
+  padding-top: 3rem !important; 
+  margin-top: unset !important;
+  font-size: 1rem;
+}
+
+.map-location {
+    border-radius: 35px;
+    overflow: hidden;
+}
+
+.footerlogo {
+    width: 200px;
+    height: 50px;
+    display: flex;
+  justify-content: center;
+}
+
+.dot {
+  height: 5px;
+  width: 5px;
+  background-color: #282828;
+  border-radius: 50%;
+  display: inline-block;
+    opacity: 0.85;
+    position: relative;
+    top: -3px;
+}
+
+
+.hover:hover {
+    opacity: 0.6;
+}
+
+
+
+
+
+
+.gallery-title
+{
+    border-bottom: #114084 1px solid;
+}
+    
+.filter-button
+{
+    font-size: 8px;
+    text-align: center;
+    color: #3466AA;
+
+}
+
+.filter-button::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #3466AA;
+    transition: width .3s;
+}
+
+.filter-button:hover::after
+{
+    width: 100%;
+    transition: width .3s;
+}
+
+.port-image
+{
+    width: 100%;
+}
+
+
+
+.gallery_product img
+{
+    height: 250px;
+    width: 300px;
+    padding: 5px;
+}
+
+.filter-active {
+  border: solid #3466AA 2px !important;
+}
+
+
+
+
+
+
+
+
+
+/* MEDIA */
+
+
+@media screen and (max-width: 1200px) {
+    .circle {
+  height: 275px;
+  width: 275px;
+  border-radius: 100px 100px 100px 100px;
+  padding-top: 1rem !important;
+  display: inline-block;
+  background: rgba(	17, 64, 132,.90);             
+   top: 50%;                         
+   transform: translate(0, 25%);
+    }
+    
+    .banner-header {
+  color: #F1F1F1;
+  margin-top: unset !important;
+  font-size: .8rem;
+  padding-top: 1rem !important;
+}
+}
+
+
+@media screen and (max-width: 600px) {
+    .grid-img {
+    width: 425px;
+    height: 375px;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.60;
+    }
+    
+    
+       .circle {
+  height: 225px;
+  width: 225px;
+  border-radius: 75px 75px 75px 75px;
+           padding-top: 1rem !important;
+  display: inline-block;
+  background: rgba(	17, 64, 132,.90);             
+   top: 50%;                         
+   transform: translate(0, 25%);
+    }
+    
+    .banner-header {
+  color: #F1F1F1;
+  margin-top: unset !important;
+  font-size: .65rem;
+  padding-top: 1rem;
+}
+    
+    #banner {
+         max-height: 400px;
+    }
+ 
+}
+
+
+
+/* CONTACT*/
+
+.contact .info {
+    border-top:solid #114084 3px;
+    border-bottom:solid #114084 3px;
+    padding: 30px;
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+  }
+  
+  .contact .info i {
+    font-size: 20px;
+    color: #114084;
+    float: left;
+    width: 44px;
+    height: 44px;
+    background: #F1F1F1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .contact .info h4 {
+    padding: 0 0 0 60px;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #222222;
+  }
+  
+  .contact .info p {
+    padding: 0 0 10px 60px;
+    margin-bottom: 20px;
+  }
+  
+  .contact .info .social-links {
+    padding-left: 60px;
+  }
+  
+  .contact .info .social-links a {
+    font-size: 18px;
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+    margin-right: 10px;
+  }
+  
+  .contact .info .social-links a:hover {
+    background: #114084;
+    color: #fff;
+  }
+  
+  .contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
+    background: #114084;
+    color: #fff;
+  }
+  
+  .contact .email-form {
+    width: 100%;
+    border-top: 3px solid #114084;
+    border-bottom: 3px solid #114084;
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+  }
+  
+  .contact .email-form .form-group {
+    padding-bottom: 8px;
+  }
+  
+  .contact .email-form .error-message {
+    display: none;
+    color: #fff;
+    background: #ed3c0d;
+    text-align: left;
+    padding: 15px;
+    font-weight: 600;
+  }
+  
+  .contact .email-form .error-message br + br {
+    margin-top: 25px;
+  }
+  
+  .contact .email-form .sent-message {
+    color: #fff;
+    background: #114084;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+  }
+
+  
+  .contact .email-form .loading {
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin: 0 10px -6px 0;
+    border: 3px solid #114084;
+    border-top-color: #eee;
+    -webkit-animation: animate-loading 1s linear infinite;
+    animation: animate-loading 1s linear infinite;
+  }
+  
+  .contact .email-form input, .contact .email-form textarea {
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+    border-radius: 4px;
+  }
+  
+  .contact .email-form input:focus, .contact .email-form textarea:focus {
+    border-color: #114084;
+  }
+  
+  .contact .email-form input {
+    height: 44px;
+  }
+  
+  .contact .email-form textarea {
+    padding: 10px 12px;
+  }
+  
+  .contact .email-form button[type="submit"] {
+    background: #114084;
+    border: 0;
+    padding: 10px 24px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 4px;
+  }
+  
+  .contact .email-form button[type="submit"]:hover {
+    background: #114084;
+  }
+
+
+
+/* SUCCES CHECKMARK */
+
+.check_mark {
+  width: 80px;
+  height: 130px;
+  margin: 0 auto;
+}
+
+button {
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.hide{
+  display:none;
+}
+
+.sa-icon {
+  width: 80px;
+  height: 80px;
+  border: 4px solid gray;
+  -webkit-border-radius: 40px;
+  border-radius: 40px;
+  border-radius: 50%;
+  margin: 20px auto;
+  padding: 0;
+  position: relative;
+  box-sizing: content-box;
+}
+
+.sa-icon.sa-success {
+  border-color: #3466AA;
+}
+
+.sa-icon.sa-success::before, .sa-icon.sa-success::after {
+  content: '';
+  -webkit-border-radius: 40px;
+  border-radius: 40px;
+  border-radius: 50%;
+  position: absolute;
+  width: 60px;
+  height: 120px;
+  background: white;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.sa-icon.sa-success::before {
+  -webkit-border-radius: 120px 0 0 120px;
+  border-radius: 120px 0 0 120px;
+  top: -7px;
+  left: -33px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform-origin: 60px 60px;
+  transform-origin: 60px 60px;
+}
+
+.sa-icon.sa-success::after {
+  -webkit-border-radius: 0 120px 120px 0;
+  border-radius: 0 120px 120px 0;
+  top: -11px;
+  left: 30px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform-origin: 0px 60px;
+  transform-origin: 0px 60px;
+}
+
+.sa-icon.sa-success .sa-placeholder {
+  width: 80px;
+  height: 80px;
+  border: 4px solid rgba(52, 102, 170, .5);
+  -webkit-border-radius: 40px;
+  border-radius: 40px;
+  border-radius: 50%;
+  box-sizing: content-box;
+  position: absolute;
+  left: -4px;
+  top: -4px;
+  z-index: 2;
+}
+
+.sa-icon.sa-success .sa-fix {
+  width: 5px;
+  height: 90px;
+  background-color: white;
+  position: absolute;
+  left: 28px;
+  top: 8px;
+  z-index: 1;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.sa-icon.sa-success.animate::after {
+  -webkit-animation: rotatePlaceholder 4.25s ease-in;
+  animation: rotatePlaceholder 4.25s ease-in;
+}
+
+.sa-icon.sa-success {
+  border-color: transparent\9;
+}
+.sa-icon.sa-success .sa-line.sa-tip {
+  -ms-transform: rotate(45deg) \9;
+}
+.sa-icon.sa-success .sa-line.sa-long {
+  -ms-transform: rotate(-45deg) \9;
+}
+
+.animateSuccessTip {
+  -webkit-animation: animateSuccessTip 0.75s;
+  animation: animateSuccessTip 0.75s;
+}
+
+.animateSuccessLong {
+  -webkit-animation: animateSuccessLong 0.75s;
+  animation: animateSuccessLong 0.75s;
+}
+
+@-webkit-keyframes animateSuccessLong {
+  0% {
+    width: 0;
+    right: 46px;
+    top: 54px;
+  }
+  65% {
+    width: 0;
+    right: 46px;
+    top: 54px;
+  }
+  84% {
+    width: 55px;
+    right: 0px;
+    top: 35px;
+  }
+  100% {
+    width: 47px;
+    right: 8px;
+    top: 38px;
+  }
+}
+@-webkit-keyframes animateSuccessTip {
+  0% {
+    width: 0;
+    left: 1px;
+    top: 19px;
+  }
+  54% {
+    width: 0;
+    left: 1px;
+    top: 19px;
+  }
+  70% {
+    width: 50px;
+    left: -8px;
+    top: 37px;
+  }
+  84% {
+    width: 17px;
+    left: 21px;
+    top: 48px;
+  }
+  100% {
+    width: 25px;
+    left: 14px;
+    top: 45px;
+  }
+}
+@keyframes animateSuccessTip {
+  0% {
+    width: 0;
+    left: 1px;
+    top: 19px;
+  }
+  54% {
+    width: 0;
+    left: 1px;
+    top: 19px;
+  }
+  70% {
+    width: 50px;
+    left: -8px;
+    top: 37px;
+  }
+  84% {
+    width: 17px;
+    left: 21px;
+    top: 48px;
+  }
+  100% {
+    width: 25px;
+    left: 14px;
+    top: 45px;
+  }
+}
+
+@keyframes animateSuccessLong {
+  0% {
+    width: 0;
+    right: 46px;
+    top: 54px;
+  }
+  65% {
+    width: 0;
+    right: 46px;
+    top: 54px;
+  }
+  84% {
+    width: 55px;
+    right: 0px;
+    top: 35px;
+  }
+  100% {
+    width: 47px;
+    right: 8px;
+    top: 38px;
+  }
+}
+
+.sa-icon.sa-success .sa-line {
+  height: 5px;
+  background-color: #3466AA;
+  display: block;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 2;
+}
+
+.sa-icon.sa-success .sa-line.sa-tip {
+  width: 25px;
+  left: 14px;
+  top: 46px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.sa-icon.sa-success .sa-line.sa-long {
+  width: 47px;
+  right: 8px;
+  top: 38px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+@-webkit-keyframes rotatePlaceholder {
+  0% {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+  5% {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+  12% {
+    transform: rotate(-405deg);
+    -webkit-transform: rotate(-405deg);
+  }
+  100% {
+    transform: rotate(-405deg);
+    -webkit-transform: rotate(-405deg);
+  }
+}
+@keyframes rotatePlaceholder {
+  0% {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+  5% {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+  12% {
+    transform: rotate(-405deg);
+    -webkit-transform: rotate(-405deg);
+  }
+  100% {
+    transform: rotate(-405deg);
+    -webkit-transform: rotate(-405deg);
+  }
+}
+  
+
+
+/* FONTS */
+
+
+@font-face {
+    font-family: 'metropolis';
+    src: url("../fonts/AvenirNextLight/Metropolis-Regular.otf");
+    font-style: normal;
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'metropolisLight';
+    src: url("../fonts/AvenirNextLight/Metropolis-Light.otf");
+    font-style: normal;
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'metropolisBold';
+    src: url("../fonts/AvenirNextLight/Metropolis-SemiBold.otf");
+    font-style: normal;
+    font-weight: 100;
+}
